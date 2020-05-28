@@ -1,5 +1,10 @@
 mylist = [1,2,3,4,5.6,7.8,True,False,"hello","world"]
 
+# Creating List Using range()
+
+list_new = list(range(20,30))
+print(list_new)
+
 # indexing starts from 0.
 print(mylist[0]) #first element
 print(mylist[-1]) #last element
