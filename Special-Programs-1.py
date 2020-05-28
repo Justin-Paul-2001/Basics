@@ -11,6 +11,15 @@ def fah_to_cels():
 
 print(fah_to_cels(212))
 
+# Converting Degree Celsius To Fahrenheit
+
+def celsius_to_fahreneit(temp1):
+    newtemp1 = (9 * temp1) / 5 + 32
+    print("the celsius temp of ",temp1," in fahreneit is",newtemp1,end=' ') 
+    print("degrees fahreneit")
+
+print(celsius_to_fahreneit(50))
+
 # Converting Inches to Feets and Inches
 
 def inches_to_feet(inches):
