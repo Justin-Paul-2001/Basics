@@ -1,3 +1,25 @@
+# Converting Degree Fahrenheit To Celsius
+
+def fah_to_cels():
+        temp_str = input("enter temperature: ")
+        if temp_str:
+            if temp_str.isdigit():
+                temp=int(temp_str)
+                a = 5*(temp-32)/9
+                print("the fahreneit temperature of ",temp," is ",a,end=' ') 
+                print("degrees centigrade")
+
+print(fah_to_cels(212))
+
+# Converting Inches to Feets and Inches
+
+def inches_to_feet(inches):
+        extrainch1 = inches%12
+        feet1 = inches//12
+        print(inches,"inches is equal to ",feet1," and ", extrainch1," inches ")
+
+print(inches_to_feet(500))
+
 # Armstrong Number Program
 # 407 = 4^3 + 0^3 + 7^3
     # = 407
