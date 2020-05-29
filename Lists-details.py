@@ -4,6 +4,8 @@ mylist = [1,2,3,4,5.6,7.8,True,False,"hello","world"]
 
 list_new = list(range(20,30))
 print(list_new)
+print(max(list_new)) # To Find Maximum Element of List
+print(min(list_new)) # To Find Minimum Element of List
 
 # indexing starts from 0.
 print(mylist[0]) #first element
