@@ -30,3 +30,36 @@ def area_triangle():
     print("Area of a triangle with sides",a,b,c,"is",area)
     
 print(area_triangle())
+
+# Takes date of form mm/dd/yyyy and writes it in form June 17, 2016 
+
+def date_display(month, day, year):
+    months = ("January","February","March","April","May","June","July","August",
+              "September","October","November","December")
+    print(str(months[month - 1])+" "+str(day)+","+" "+str(year))
+    
+print(date_display(5 , 29, 2020))
+
+# Takes date such as July 17, 2016 and write it as 7/17/2016 
+
+def display_date(mon, day, year):
+    months = {"January":1,"February":2,"March":3,"April":4,"May":5,"June":6,
+              "July":7,"August":8,"September":9,"October":10,"November":11,
+              "December":12}
+    print(str(months[mon])+"/"+str(day)+"/"+str(year))
+    
+print(display_date("May" , 29, 2020))
+
+# Compute the mean and standard deviation of a list of floats 
+
+import random
+num_list = []
+random.seed(150)
+for i in range(0,25):
+    num_list.append(round(100*random.random(),1)) 
+def statistics_data(ran_list):
+    import statistics
+    print(statistics.mean(ran_list))
+    print(statistics.stdev(ran_list))
+    
+print(statistics_data(num_list))
