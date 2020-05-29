@@ -1,3 +1,38 @@
+# Factorial Program Using For Loop
+
+number = int(input("Enter the Number for Factorial: "))
+factorial = 1
+for num in range(1,number+1):
+    factorial *= num
+print("The Factorial of {} is {}".format(number,factorial))
+
+# Fibonacci Series With For Loop
+# Fibonacci Series -> 0 1 1 2 3 5 8 13 21 34 55 ...
+                    # 0+1 = 1 , 1+1 = 2 , 1+2 = 3
+                    # 2+3 = 5 , 3+5 = 8 ....
+
+terms = int(input("Enter No. of Terms: "))
+first_term = 0
+second_term = 1
+for x in range(terms):
+    if x <= 1:
+        print(x , end = " ")
+    else:
+        next_term = first_term + second_term
+        print(next_term, end = "\t") # To give more space between terms
+                                     # use \t inside " " of end attribute .
+        first_term = second_term
+        second_term = next_term
+
+# Star Pattern using For Loop
+
+rows = int(input("\nEnter No. of rows: "))
+for x in range(1,rows + 1):
+    for y in range(1,x):
+        print("*",end = " ")
+    print()
+
+
 # Converting Miles To Feets
 
 def miles_to_feet(miles):
