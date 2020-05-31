@@ -10,6 +10,17 @@ def number_squared(number): # Defining A Function
 
 print(number_squared(5)) # Calling the Function
                          # Here '5' is parameter
+  
+# Program For Default Parameter :
+
+def getName(name = "JUSTIN"):
+    return ("My Name is {}".format(name))
+
+print(getName())    # If no Parameter is given then the default paramter
+                    # is used.
+
+print(getName("PAUL")) # When parameter is given then default parameter is
+                       # overwritten by given argument.
 
 # Finding The Hypotenuse of Right Angle Triangle:
 
