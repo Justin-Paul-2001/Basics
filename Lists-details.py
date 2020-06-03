@@ -34,6 +34,13 @@ mylist.clear() # empties a list
 print(mylist)
 del mylist #complete list is deleted.
 
+######### List is A example of Array. #################
+#####   Enumerate Function   #####
+
+cities = ["Pune","Mumbai","Goa","Chennai","Kerala","Jabalpur","Andaman","Delhi","Chandigarh"]
+for number,city in enumerate(cities , start = 1): # Enumerate Will Return Both Index and Element as tuple.
+                                                  # {start} attribute will indicate starting of indexing.                       
+    print(number,"->",city)
 
 a = [1,2,3,4,5]
 b = [6,7,8,9,10]
