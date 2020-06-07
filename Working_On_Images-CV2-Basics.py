@@ -68,3 +68,27 @@ cv2.imshow("Inverse Binary Image",binary_inv)
 cv2.imwrite('Duplicate RGB Image.png', rgb_img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+# Creating A Color Variation TrackBar For BGR scale ->
+
+def nothing(x):
+    pass
+
+img = np.zeros([400,400,3], dtype ='uint8')
+
+cv2.namedWindow("Color Variation") # Creating A Window of Specified Name.
+
+cv2.createTrackbar("Red Trackbar","Color Variation",0,255,nothing)
+cv2.createTrackbar("Green Trackbar","Color Variation",0,255,nothing)
+cv2.createTrackbar("Blue Trackbar","Color Variation",0,255,nothing)
+    
+while True:
+    cv2.imshow("Sample Image" , img)
+    if cv2.waitKey(1) == ord('q'): # ordinal value of 'Q' key of keyboard is ord(q)
+        break
+    r = cv2.getTrackbarPos("Red Trackbar","Color Variation")
+    g = cv2.getTrackbarPos("Green Trackbar","Color Variation")
+    b = cv2.getTrackbarPos("Blue Trackbar","Color Variation")
+    img[:,:] = [b,g,r]
+
+cv2.destroyAllWindows()
