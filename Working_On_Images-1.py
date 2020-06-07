@@ -41,10 +41,28 @@ cv2.putText(rgb_img , "Justin's Image" , (60,50) , cv2.FONT_HERSHEY_COMPLEX , 2 
 # 6th Parameter -> Color of text
 # 7th Parameter -> Thickness of text.
 
+# Creation Of A Binary Image ->
+
+status , binary = cv2.threshold(gray,200,255,cv2.THRESH_BINARY)
+status , binary_inv = cv2.threshold(gray,200,255,cv2.THRESH_BINARY_INV)
+# .threshold() parameter
+# 1st parameter -> Source of Gray Scale Image
+# 2nd parameter -> Start of the Threshold Value
+# 3rd parameter -> End of the Threshold Value
+# 4th parameter -> cv2.THRESH_BINARY : this does the conversion to binary.
+
+# Threshold Value -> Any Pixel below 127 will be considered as black and
+                #   anything between 127 - 255 will be considered as white.
+
+# NOTE : cv2.threshold needs 2 variables for calling similar to Emunerate().
+#        However the 1st parameter {here, 'status'} actually not used at all.
+
 
 cv2.imshow('Original Image' , img)
 cv2.imshow('GrayScale Image' , gray_img)
 cv2.imshow('RGBScale Image' , rgb_img)
+cv2.imshow("Binary Image/Black-White Image",binary)
+cv2.imshow("Inverse Binary Image",binary_inv)
 
 # Creating and Saving a Duplicate Copy of the Image.
 cv2.imwrite('Duplicate RGB Image.png', rgb_img)
